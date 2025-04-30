@@ -1,0 +1,336 @@
+<html>
+
+<head>
+    <title>ЛЕНФИЛЬМ</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            width: 90%;
+            height: 90%;
+            /* max-height: 100vh; */
+            max-width: 1200px;
+            min-height: 600px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .left-section {
+            width: 30%;
+            background-color: #B5E1FF;
+            border-radius: 10px;
+            padding: 20px;
+            position: relative;
+        }
+
+        .left-section img {
+            display: block;
+            margin: 0 auto;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            top: 20%;
+            left: 55%;
+        }
+
+        .left-section p1 {
+            margin-top: 20px;
+            font-size: 18px;
+            text-align: left;
+            position: absolute;
+            bottom: 56px;
+            left: 28px;
+        }
+
+        .left-section p2 {
+            margin-top: 20px;
+            font-size: 14px;
+            text-align: left;
+            position: absolute;
+            bottom: 28px;
+            left: 28px;
+        }
+
+        .second-section {
+            width: 65%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .second-section h1 {
+            font-size: 72px;
+            margin: 0;
+            text-align: right;
+        }
+
+        .middle-section {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            width: 48%;
+            align-items: flex-end;
+        }
+
+        .stats div {
+            background-color: #B5E1FF;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 48%;
+            height: fit-content;
+        }
+
+        .stats div p {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .stats div p:last-child {
+            font-size: 18px;
+            margin-top: 10px;
+            font-weight: 100;
+        }
+
+        .right-section {
+            width: 48%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .awards {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .awards div {
+            background-color: #B5E1FF;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 48%;
+        }
+
+        .awards img {
+            width: 100px;
+            height: 50px;
+        }
+
+        .awards p {
+            margin: 5px 0 0;
+            font-size: 14px;
+        }
+
+        .production {
+            background-color: #B5E1FF;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .production h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .production p {
+            margin-top: 10px;
+            font-size: 18px;
+            text-align: left;
+            bottom: 0px;
+            left: 28px;
+        }
+
+        @media (max-width: 768px) {
+
+            .left-section,
+            .second-section {
+                width: 100%;
+            }
+
+            .middle-section,
+            .right-section {
+                width: 100%;
+                flex-direction: column;
+            }
+
+            .stats div,
+            .awards div {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+
+        .post {
+            width: 90%;
+            height: 90%;
+            max-height: 100vh;
+            max-width: 1200px;
+            min-height: 600px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+        }
+
+        .description {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .description h1 {
+            margin: 0px;
+            margin-bottom: 20px;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .description p1 {
+            margin: 0px;
+            margin-bottom: 20px;
+            font-size: 12px;
+        }
+
+        .description p2 {
+            margin: 0px;
+            font-size: 18px;
+            max-width: 40%;
+        }
+
+        .poster {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .poster img {
+            height: auto;
+            width: 100%;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-section">
+            <img src="./pics/logo.png" alt="здесь будет круглая картинка" />
+            <p1>
+                Россия,
+                <br />
+                Санкт-Петербург,
+                <br />
+                Каменноостровский проспект, 10
+            </p1>
+            <p2>+9(435)67-88-11 lenfilm@lenfilm.ru</p2>
+        </div>
+        <div class="second-section">
+            <h1>ЛЕНФИЛЬМ</h1>
+            <div class="middle-section">
+                <div class="stats">
+                    <div style="margin-right: 20px;">
+                        <p>1232</p>
+                        <p>Фильма</p>
+                    </div>
+                    <div>
+                        <p>824</p>
+                        <p>Мультфильма</p>
+                    </div>
+                </div>
+                <div class="right-section">
+                    <div class="awards">
+                        <div style="margin-right: 20px;">
+                            <img src="./pics/orden_L.png" alt="Орден Ленина" />
+                            <p>Орден Ленина</p>
+                        </div>
+                        <div>
+                            <img src="./pics/orden_TKZ.png" alt="Орден Трудового Красного Знамени" />
+                            <p>Орден Трудового Красного Знамени</p>
+                        </div>
+                    </div>
+                    <div class="production">
+                        <h2>Продукция</h2>
+                        <p>Игровые,
+                            <br />
+                            документальные,
+                            <br />
+                            анимационные фильмы
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post">
+        <div class="description">
+            <h1>Форрест Гамп</h1>
+            <p1>1994 Комедия</p1>
+            <p2>
+                От лица главного героя Форреста Гампа, слабоумного безобидного человека с благородным и открытым
+                сердцем, рассказывается история его необыкновенной жизни
+            </p2>
+        </div>
+        <div class="poster">
+            <img src="./pics/forrest.png" alt="Постер" />
+        </div>
+    </div>
+    <div class="post">
+        <div class="description">
+            <h1>Форрест Гамп</h1>
+            <p1>1994 Комедия</p1>
+            <p2>
+                От лица главного героя Форреста Гампа, слабоумного безобидного человека с благородным и открытым
+                сердцем, рассказывается история его необыкновенной жизни
+            </p2>
+        </div>
+        <div class="poster">
+            <img src="./pics/forrest.png" alt="Постер" />
+        </div>
+    </div>
+    <div class="post">
+        <div class="description">
+            <h1>Форрест Гамп</h1>
+            <p1>1994 Комедия</p1>
+            <p2>
+                От лица главного героя Форреста Гампа, слабоумного безобидного человека с благородным и открытым
+                сердцем, рассказывается история его необыкновенной жизни
+            </p2>
+        </div>
+        <div class="poster">
+            <img src="./pics/forrest.png" alt="Постер" />
+        </div>
+    </div>
+</body>
+
+</html>
