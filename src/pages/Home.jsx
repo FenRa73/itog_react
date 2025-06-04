@@ -1,8 +1,15 @@
 import React, { useContext, useState } from "react";
 import { ProjectContext } from "../context/ProjectContext";
-import ProjectCard from "../components/ProjectCard";
-import ProjectForm from "../components/ProjectForm";
 import { createProject, updateProject, deleteProject } from "../api/api";
+import logo from "./pics/logo.png"
+import ordenL from "./pics/orden_L.png"
+import ordenTKZ from "./pics/orden_TKZ.png"
+import "../styles/App.css"
+import ButtonFilm from "../components/ButtonFilm";
+import { Link } from "react-router-dom";
+import ButtonMult from "../components/ButtonMult";
+import ItemButton from "../components/ItemButton";
+
 
 const Home = () => {
     const { state, dispatch } = useContext(ProjectContext);
@@ -33,24 +40,67 @@ const Home = () => {
     if (state.loading) return <p>Загрузка...</p>;
     if (state.error) return <p>Ошибка: {state.error}</p>;
 
+    const films = {
+        name: 'Фильма',
+        numbers: '1232'
+    };
+
+    const mults = {
+        name: 'Мультфильма',
+        numbers: '893'
+    };
+
+
     return (
-        <div className="max-w-4xl mx-auto p-4">
-            <h1 className="text-3xl font-bold text-center mb-8">Мои проекты</h1>
-            <ProjectForm
-                onSubmit={editingProject ? handleUpdate : handleCreate}
-                initialData={editingProject}
-            />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-                {state.projects.map((project) => (
-                    <ProjectCard
-                        key={project.id}
-                        project={project}
-                        onEdit={handleEdit}
-                        onDelete={handleDelete}
-                    />
-                ))}
+        <div className="App">
+            <div className="container">
+                <div className="left-section">
+                    <img src={logo} alt="Логотип" />
+                    <p className="address">
+                        Россия,
+                        <br />
+                        Санкт-Петербург,
+                        <br />
+                        Каменноостровский проспект, 10
+                    </p>
+                    <p className="phone">+9(435)67-88-11 lenfilm@lenfilm.ru</p>
+                </div>
+                <div className="second-section">
+                    <h1>ЛЕНФИЛЬМ</h1>
+                    <div className="middle-section">
+                        <div className="stats">
+                            <Link to="/films">
+                                {<ItemButton {...films} />}
+                            </Link>
+                            <Link to="/films">
+                                {<ItemButton {...mults} />}
+                            </Link>
+                        </div>
+                        <div className="right-section">
+                            <div className="awards">
+                                <div className="margin20">
+                                    <img src={ordenL} alt="Орден Ленина" />
+                                    <p>Орден Ленина</p>
+                                </div>
+                                <div>
+                                    <img src={ordenTKZ} alt="Орден Трудового Красного Знамени" />
+                                    <p>Орден Трудового Красного Знамени</p>
+                                </div>
+                            </div>
+                            <div className="production">
+                                <h2>Продукция</h2>
+                                <p>Игровые,
+                                    <br />
+                                    документальные,
+                                    <br />
+                                    анимационные фильмы
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </div >
     );
 };
 

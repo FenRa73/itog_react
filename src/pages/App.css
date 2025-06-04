@@ -13,7 +13,7 @@ body {
   width: 90%;
   height: 90%;
   /* max-height: 100vh; */
-  /* max-width: 1200px; */
+  max-width: 1200px;
   min-height: 600px;
   background-color: white;
   border-radius: 10px;
@@ -42,7 +42,7 @@ body {
   left: 55%;
 }
 
-.left-section .address {
+.left-section p1 {
   margin-top: 20px;
   font-size: 18px;
   text-align: left;
@@ -51,7 +51,7 @@ body {
   left: 28px;
 }
 
-.left-section .phone {
+.left-section p2 {
   margin-top: 20px;
   font-size: 14px;
   text-align: left;
@@ -89,33 +89,43 @@ body {
   align-items: flex-end;
 }
 
-.stats .buttonFilm {
+.stats div {
   background-color: #B5E1FF;
   border-radius: 10px;
   padding: 20px;
   text-align: center;
-  width: fit-content;
-  height: fit-content;
-  margin-right: 10px;
-  margin-left: 10px;
-}
-
-.stats .buttonMult {
-  background-color: #B5E1FF;
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  width: fit-content;
+  width: 200px;
   height: fit-content;
 }
 
-.stats .pnum {
+.stats div p {
   margin: 0;
   font-size: 24px;
   font-weight: bold;
 }
 
-.stats .pfilms {
+.stats div p:last-child {
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: 100;
+}
+
+.stats button {
+  background-color: #B5E1FF;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+  height: fit-content;
+}
+
+.stats button p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.stats button p:last-child {
   font-size: 18px;
   margin-top: 10px;
   font-weight: 100;
@@ -132,6 +142,10 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+}
+
+.margin20 {
+  margin-right: 20px;
 }
 
 .awards div {
@@ -220,13 +234,13 @@ body {
   font-weight: bold;
 }
 
-.description .year {
+.description p1 {
   margin: 0px;
   margin-bottom: 20px;
   font-size: 12px;
 }
 
-.description .description {
+.description p2 {
   margin: 0px;
   font-size: 18px;
   max-width: 40%;
@@ -236,55 +250,10 @@ body {
   padding: 20px;
   display: flex;
   justify-content: center;
-
 }
 
 .poster img {
   height: auto;
   width: 100%;
   border-radius: 30px;
-}
-
-.navbar {
-  height: 100px;
-  background-color: #B5E1FF;
-  border-radius: 0 0 16px 16px;
-  margin-top: 0px;
-  height: 64px;
-  width: 90%;
-  text-align: center;
-  font-size: 24px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  position: fixed;
-}
-
-.navbar .item {
-  margin: 0 0 0 48px;
-  font-family: Arial, sans-serif;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.navbar .search {
-  margin: 0 0 0 48px;
-  font-family: Arial, sans-serif;
-  font-size: 24px;
-}
-
-.nullblock {
-  height: 64px;
-}
-
-.upbutton {
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  font-size: 24px;
-  color: #fff;
-  background: #1da9f5;
-  padding: 10px;
-  border-radius: 100px;
-  cursor: pointer;
 }

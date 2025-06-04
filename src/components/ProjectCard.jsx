@@ -7,7 +7,7 @@ const ProjectCard = ({ project, onEdit, onDelete }) => {
             <h2 className="text-xl font-bold mt-2">{project.title}</h2>
             <p className="text-gray-600">{project.description}</p>
             <div className="flex justify-between mt-4">
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-blue-500">Посмотреть</a>
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-blue-500">Watch</a>
                 <div>
                     <button onClick={() => onEdit(project)} className="text-yellow-500 mr-2">Редактировать</button>
                     <button onClick={() => onDelete(project.id)} className="text-red-500">Удалить</button>
